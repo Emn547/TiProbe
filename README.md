@@ -1,3 +1,5 @@
 # TiProbe
-![image](https://github.com/Emn547/TiProbe/assets/29408499/2ecbd33f-54fe-4600-a4c1-cf95f2def7a3)
+# Schnider LMDCM572 Step Motor Operation and Commands
+# Setting Up The Communication
+The communication is done via PUTTY software. There is a serial to USB adapter for the schnider motor. After connecting it to the USB port, one can find the serial port associated with the motor using the Device Manager window in the Control Panel under Ports:
 
