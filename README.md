@@ -7,5 +7,9 @@ The communication is done via serial channel. There is a serial to USB adapter f
 
 In this case the serial channel is COM3. As such, this is the serial port that will be used in the code.
 
-### Commands
+### Stepper Motor Commands
+#### query(self, query)
+Translates the query from string to bytes  and outputs the response of the serial channel
+#### serial_write(self, command, number_of_trys=3)
+Translates the command from string to bytes and writes it to the serial channel
 
