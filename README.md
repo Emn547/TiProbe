@@ -9,7 +9,7 @@ In this case the serial channel is COM3. As such, this is the serial port that w
 
 ## Stepper Motor Commands
 ### Data Query Translator
-#### <u>query(self, query)<u>
+#### <u> query(self, query) <u>
 Translates the query from string to bytes  and outputs the response of the serial channel
 
 ### Command Writer Function
