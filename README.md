@@ -18,7 +18,7 @@ Translates the query from string to bytes  and outputs the response of the seria
 Translates the command from string to bytes and writes it to the serial channel<br>
 
 
-### Data Query Function
+### Data Query Functions
 #### *__get_all(self)__*
 Returns all of the stepper motor's parapeters (position, acceleration, etc.)
 #### *__get_v(self)__*
