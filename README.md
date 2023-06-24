@@ -50,11 +50,11 @@ Echo mode configuration: the range of values for the echo mode is: 0,1,2,3.
 
 #### *__set_escFlag(self, flag)__*
 This function sets the escape flag value (valid flag values = {0,1,2,3}).
-Escape flag configuration: configures the escape flag (entering the escape flag will stop both the program and the motor) 
-        0 – escape flag set to respond to CTRL+E 
-        1 – escape flag set to respond to ESC keypress (default) 
-        2 – escape flag set to respond to addressable CTRL+E (party mode) 
-        3 – escape flag set to respond to addressable ESC keypress (party mode) (party mode = several motors are controlled by the same computer)
+Escape flag configuration: configures the escape flag (entering the escape flag will stop both the program and the motor)<br> 
+        0 – escape flag set to respond to CTRL+E<br> 
+        1 – escape flag set to respond to ESC keypress (default)<br> 
+        2 – escape flag set to respond to addressable CTRL+E (party mode)<br> 
+        3 – escape flag set to respond to addressable ESC keypress (party mode) (party mode = several motors are controlled by the same computer)<br>
 
 
 ### Movement Configuration Functions
