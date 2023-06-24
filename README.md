@@ -41,12 +41,12 @@ Returns a flag if the motor is moving or not
 
 ### System Configuration Functions
 #### *__set_echo(self, mode)__*
-This function sets the echo mode (valid mode values = {0,1,2,3}).
-Echo mode configuration: the range of values for the echo mode is: 0,1,2,3.
-        0 – the user input and the system output are presented at the buffer.
-        1 – only the user input is presented at the buffer
-        2 – only the system output is presented at the buffer.
-        3 – the user input and the system output are presented after hitting the return (“enter”) button
+This function sets the echo mode (valid mode values = {0,1,2,3}).<br>
+Echo mode configuration: the range of values for the echo mode is: 0,1,2,3.<br>
+        0 – the user input and the system output are presented at the buffer.<br>
+        1 – only the user input is presented at the buffer<br>
+        2 – only the system output is presented at the buffer<br>
+        3 – the user input and the system output are presented after hitting the return (“enter”) button<br>
 
 #### *__set_escFlag(self, flag)__*
 This function sets the escape flag value (valid flag values = {0,1,2,3}).
