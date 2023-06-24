@@ -71,8 +71,7 @@ Sets the maximum revolution velocity of the engine movement procedure (range: 1-
 Sets the motor's acceleration  (input range: 1-1000000000)
 
 #### *__set_decel(self, deceleration)__*
-Sets the motor's deceleration (input: range 1–1000000000)
-        self.serial_write("D " + str(deceleration))
+Sets the motor's deceleration (input range: 1–1000000000)
 
 #### *__encoder_mode(self, mode)__*
 Enables/disables encoder function (valid mode values = {0,1}).
@@ -81,6 +80,21 @@ Enables/disables encoder function (valid mode values = {0,1}).
 
 __Note:__ in order to get a high resolution using the MA and MR motion functions one must define moderate values for acceleration, initial velocity, 
 maximum velocity and deceleration. Setting high values for those parameters can lead to a step deviation (evenseveral steps).
+
+### Movement Control Functions
+#### *__move_abs(self, absolute_position)__*
+Moves the motor to an absolute position specified by the user (input range: signed 32 bit)
+ 
+#### *__move_rel(self, distance)__*
+Moves the motor relatively to to its initial current position (input range: signed 32 bit)
+
+#### *__move_prev(self, value)__*
+Moves the motor according to previous movement command with the user's input (value)
+
+#### *__move(self, speed)__*
+Moves the motor constantly with a constant input speed (input range: -+ 5000000)
+
+
 
 
         
