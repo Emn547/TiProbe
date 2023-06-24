@@ -12,9 +12,11 @@ In this case the serial channel is COM3. As such, this is the serial port that w
 #### <u> query(self, query) <u>
 Translates the query from string to bytes  and outputs the response of the serial channel
 
+
 ### Command Writer Function
 #### serial_write(self, command, number_of_trys=3)
 Translates the command from string to bytes and writes it to the serial channel
+
 
 ### Data Query Function
 #### *__get_all(self)__*
@@ -36,6 +38,7 @@ Returns the motor's echo mode
 #### *__is_moving(self)__*
 Returns a flag if the motor is moving or not
 
+
 ### System Configuration Functions
 #### *__set_echo(self, mode)__*
 This function sets the echo mode (valid mode values = {0,1,2,3}).
@@ -46,12 +49,13 @@ Echo mode configuration: the range of values for the echo mode is: 0,1,2,3.
         3 – the user input and the system output are presented after hitting the return (“enter”) button
 
 #### *__set_escFlag(self, flag)__*
-This function sets the escape flag value ( valid flag values = {0,1,2,3}).
+This function sets the escape flag value (valid flag values = {0,1,2,3}).
 Escape flag configuration: configures the escape flag (entering the escape flag will stop both the program and the motor) 
         0 – escape flag set to respond to CTRL+E 
         1 – escape flag set to respond to ESC keypress (default) 
         2 – escape flag set to respond to addressable CTRL+E (party mode) 
         3 – escape flag set to respond to addressable ESC keypress (party mode) (party mode = several motors are controlled by the same computer)
+
 
 ### Movement Configuration Functions
 #### *__set_vi(self, initial_velocity)__*
@@ -60,26 +64,23 @@ Sets the initial velocityof the motor (input range: 1-5000000)
 #### *__set_vf(self, final_velocity)__*
 Sets final revolution velocity (input range: 1-5000000)
 
-    def set_vm(self, max_velocity):
-        """set final revolution velocity (range: 1-5000000)"""
-        self.serial_write("VM " + str(max_velocity))
+#### *__set_vm(self, max_velocity)__*
+Sets the maximum revolution velocity of the engine movement procedure (range: 1-5000000)
+        
+#### *__set_accel(self, acceleration)__*
+Sets the motor's acceleration  (input range: 1-1000000000)
 
-    def set_accel(self, acceleration):
-        """set acceleration (range – 1000000000)"""
-        self.serial_write("A " + str(acceleration))
-
-    def set_decel(self, deceleration):
-        """set deceleration (range – 1000000000)"""
+#### *__set_decel(self, deceleration)__*
+Sets the motor's deceleration (input: range 1–1000000000)
         self.serial_write("D " + str(deceleration))
 
-    def encoder_mode(self, mode):
-        """enable/disable encoder function (mode = {0,1})
-            If mode = 0 then the resolution is 56,000 steps per revolution, if mode = 1 the resolution is 4,000 steps
-            per revolution. Note: in order to get a high resolution using the MA and MR motion function one must define
-            moderate values for A, VI, VM and D. High values of those parameters can lead to a step deviation (even
-            several steps). For getting even higher precision (wanna get high?) the encoder resolution needs to be set
-            to mode = 0 (more steps per revolution)."""
-        self.serial_write("EE " + str(mode))
+#### *__encoder_mode(self, mode)__*
+Enables/disables encoder function (valid mode values = {0,1}).
+        0 - sets the revolution resolution to 56,000 steps per revolution
+        1 - sets the resolution resolution to 4,000 steps per revolution
+
+__Note:__ in order to get a high resolution using the MA and MR motion functions one must define moderate values for acceleration, initial velocity, 
+maximum velocity and deceleration. Setting high values for those parameters can lead to a step deviation (evenseveral steps).
 
 
         
