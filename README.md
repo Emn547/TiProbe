@@ -18,23 +18,33 @@ Translates the command from string to bytes and writes it to the serial channel
 
 ### Data Query Function
 #### get_all(self)
-returns all of the stepper motor's parapeters (position, acceleration, etc.)
+Returns all of the stepper motor's parapeters (position, acceleration, etc.)
 #### get_v(self)
-returns the motor's real time velocity value
+Returns the motor's real time velocity value
 #### get_vi(self)
-returns the motor's initial velocity value 
-#### get_vf(self):
-returns the motor's final velocity value 
-#### get_vm(self):
-returns the motor's maximum velocity value 
-#### get_pos(self):
-returns the motor's real time position value
-#### get_encoder(self):
-returns the motor's encoder mode
+Returns the motor's initial velocity value 
+#### get_vf(self)
+Returns the motor's final velocity value 
+#### get_vm(self)
+Returns the motor's maximum velocity value 
+#### get_pos(self)
+Returns the motor's real time position value
+#### get_encoder(self)
+Returns the motor's encoder mode
 #### get_echo(self)
-returns the motor's echo mode
-#### is_moving(self):
-returns a flag if the motor is moving or not
+Returns the motor's echo mode
+#### is_moving(self)
+Returns a flag if the motor is moving or not
+
+###System Configuration Functions
+#### __set_echo(self, mode)__
+Echo mode configuration: the range of values for the echo mode is: 0,1,2,3.
+        mode values = {0,1,2,3}
+        0 – the user input and the system output are presented at the buffer.
+        1 – only the user input is presented at the buffer
+        2 – only the system output is presented at the buffer.
+        3 – the user input and the system output are presented after hitting the return (“enter”) button"""
+
         
 
 
