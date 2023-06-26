@@ -94,6 +94,12 @@ Moves the motor according to previous movement command with the user's input (va
 #### *__move(self, speed)__*
 Moves the motor constantly with a constant input speed (input range: -+ 5000000)
 
+## Procedure Configuration
+### Sourcemeter and Ampermeter Configuration
+As mentioned in the code's comments, the GPIB address of the Keithly 2450 needs to be checked in the ICS GPIB Explorer window and set accordingly:
+
+
+source_meter.source_mode = 'voltage'          # sets the Keithley 2450 to act as a voltage source
 
 
 
