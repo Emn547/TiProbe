@@ -97,9 +97,23 @@ Moves the motor constantly with a constant input speed (input range: -+ 5000000)
 ## Procedure Configuration
 ### Sourcemeter and Ampermeter Configuration
 As mentioned in the code's comments, the GPIB address of the Keithly 2450 needs to be checked in the ICS GPIB Explorer window and set accordingly:
+![image](https://github.com/Emn547/TiProbe/assets/29408499/7df3b864-0b04-45b1-baa8-941dc6c91d1e)
 
+### Stepper Motor Configuration
+As mentioned in the code's comments, the COM address of the stepper otor needs to be checked in Device Manager window:
+![image](https://github.com/Emn547/TiProbe/assets/29408499/143f9de4-6ae8-454a-92fe-6736f419ff36)
 
-source_meter.source_mode = 'voltage'          # sets the Keithley 2450 to act as a voltage source
+### Approach Function 
+#### *__approach(supply_voltage, th_current, approach_speed, direction)__*
+This function moves the motor until the threshold current is measured. Inputs explanation:
+supply_voltage - the voltage supply value, sets the supply voltage of the Keithly 2450<br>
+th_current - threshold current value (the measure currnet value in which the motor will stop)<br>
+approach_speed - sets the motor's slew speed for the approach<br>
+direction - approach direction (-1 for approaching and 1 for retracting)<br>
+
+### Console Controle Configuration
+This section of the code is the user interface for the experiment procedure
+
 
 
 
